@@ -41,3 +41,7 @@ void plotAgents(){
       agents[ii].display();
     }
 }
+
+void plotSearchPoint(){
+  set(int(map(searchX,minRange,maxRange,0,width)),int(map(searchY,minRange,maxRange,0,height)),searchPointColor);
+}
