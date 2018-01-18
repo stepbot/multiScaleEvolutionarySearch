@@ -35,3 +35,9 @@ void createAgents(int problem){
       agents[ii] = new agent(x,y,int(map(x,minRange,maxRange,0,width)),int(map(y,minRange,maxRange,0,height)),value,agentColor);
     }
 }
+
+void plotAgents(){
+  for(int ii = 0; ii < agentCount; ii++){
+      agents[ii].display();
+    }
+}
