@@ -58,18 +58,22 @@ float minRange(int problem){
     // stepbots peaks
     case 0:
       minRange = -5;
+      break;
       
     // Schwefel function
     case 1:
       minRange = -500;
+      break;
       
     // Rastrigin function
     case 2:
       minRange = -5.14;
+      break;
       
     // Michalewicz function
     case 3:
-      minRange = 0;  
+      minRange = 0;
+      break;
   }
   return minRange;
   
