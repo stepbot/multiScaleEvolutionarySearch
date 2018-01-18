@@ -1,3 +1,26 @@
+String problemName(int problem){
+  String problemName = "unknown";
+  switch(problem){
+    // stepbots peaks
+    case 0:
+      problemName = "stepbots peaks";
+      
+    // Schwefel function
+    case 1:
+      problemName = "Schwefel function";
+      
+    // Rastrigin function
+    case 2:
+      problemName = "Rastrigin function";
+      
+    // Michalewicz function
+    case 3:
+      problemName = "Michalewicz function";  
+  }
+  return problemName;
+  
+}
+
 float problemValue(int problem, float x, float y){
   float functionValue = -1e33;
   switch(problem){
@@ -41,5 +64,28 @@ float minRange(int problem){
       minRange = 0;  
   }
   return minRange;
+  
+}
+
+float maxRange(int problem){
+  float maxRange = 0;
+  switch(problem){
+    // stepbots peaks
+    case 0:
+      maxRange = 5;
+      
+    // Schwefel function
+    case 1:
+      maxRange = 500;
+      
+    // Rastrigin function
+    case 2:
+      maxRange = 5.14;
+      
+    // Michalewicz function
+    case 3:
+      maxRange = PI;  
+  }
+  return maxRange;
   
 }
