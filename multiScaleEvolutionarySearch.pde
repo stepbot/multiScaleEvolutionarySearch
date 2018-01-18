@@ -35,6 +35,12 @@ void setup() {
   size(640, 640);
   agents = new agent[agentCount];
   
+  minRange = minRange(problem);
+  maxRange = maxRange(problem);
+  
+  searchX = random(minRange,maxRange);
+  searchY = random(minRange,maxRange);
+  
 }
 
 void draw(){
