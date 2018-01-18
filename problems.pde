@@ -4,18 +4,22 @@ String problemName(int problem){
     // stepbots peaks
     case 0:
       problemName = "stepbots peaks";
+      break;
       
     // Schwefel function
     case 1:
       problemName = "Schwefel function";
+      break;
       
     // Rastrigin function
     case 2:
       problemName = "Rastrigin function";
+      break;
       
     // Michalewicz function
     case 3:
-      problemName = "Michalewicz function";  
+      problemName = "Michalewicz function";
+      break;
   }
   return problemName;
   
@@ -27,18 +31,22 @@ float problemValue(int problem, float x, float y){
     // stepbots peaks
     case 0:
       functionValue = (pow(cos(8*(x-2))*cos(8*(y)),1)-(abs(x-2)+abs(y)));
+      break;
       
     // Schwefel function
     case 1:
       functionValue = (418.9829*(2))-((x*sin(sqrt(abs(x))))+(y*sin(sqrt(abs(y)))));
+      break;
       
     // Rastrigin function
     case 2:
       functionValue = (418.9829*(2))-((x*sin(sqrt(abs(x))))+(y*sin(sqrt(abs(y)))));
+      break;
       
     // Michalewicz function
     case 3:
-      functionValue = (sin(x)*pow((sin((1*pow(x,2))/PI)),2*(10)))+(sin(y)*pow((sin((2*pow(y,2))/PI)),2*(10)));  
+      functionValue = (sin(x)*pow((sin((1*pow(x,2))/PI)),2*(10)))+(sin(y)*pow((sin((2*pow(y,2))/PI)),2*(10)));
+      break;
   }
   return functionValue;
   
@@ -73,18 +81,22 @@ float maxRange(int problem){
     // stepbots peaks
     case 0:
       maxRange = 5;
+      break;
       
     // Schwefel function
     case 1:
       maxRange = 500;
+      break;
       
     // Rastrigin function
     case 2:
       maxRange = 5.14;
+      break;
       
     // Michalewicz function
     case 3:
-      maxRange = PI;  
+      maxRange = PI;
+      break;
   }
   return maxRange;
   

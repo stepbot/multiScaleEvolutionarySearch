@@ -37,6 +37,15 @@ void setup() {
   
 }
 
-void draw(){ 
-  
+void draw(){
+  delay(1000);
+  if(problem<=3){
+    println(problemName(problem));
+    if(moved>minMoved){
+      moved = 0;
+    }else{
+      problem++;
+      moved = 1e33;
+    }
+  }  
 }
