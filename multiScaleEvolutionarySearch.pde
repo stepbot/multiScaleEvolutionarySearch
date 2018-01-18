@@ -42,6 +42,7 @@ void setup() {
   searchY = random(minRange,maxRange);
   
   analyzeProblemForPlotting(problem);
+  plotProblem(problem);
   
 }
 
