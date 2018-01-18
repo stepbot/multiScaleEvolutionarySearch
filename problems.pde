@@ -40,12 +40,12 @@ float problemValue(int problem, float x, float y){
       
     // Rastrigin function
     case 2:
-      functionValue = (418.9829*(2))-((x*sin(sqrt(abs(x))))+(y*sin(sqrt(abs(y)))));
+      functionValue = (pow(cos(8*(x-2))*cos(8*(y)),1)-(abs(x-2)+abs(y)));
       break;
       
     // Michalewicz function
     case 3:
-      functionValue = (sin(x)*pow((sin((1*pow(x,2))/PI)),2*(10)))+(sin(y)*pow((sin((2*pow(y,2))/PI)),2*(10)));
+      functionValue = (418.9829*(2))-((x*sin(sqrt(abs(x))))+(y*sin(sqrt(abs(y)))));
       break;
   }
   return functionValue;
@@ -67,12 +67,12 @@ float minRange(int problem){
       
     // Rastrigin function
     case 2:
-      minRange = -5.14;
+      minRange = -5;
       break;
       
     // Michalewicz function
     case 3:
-      minRange = 0;
+      minRange = -500;
       break;
   }
   return minRange;
@@ -94,12 +94,12 @@ float maxRange(int problem){
       
     // Rastrigin function
     case 2:
-      maxRange = 5.14;
+      maxRange = 5;
       break;
       
     // Michalewicz function
     case 3:
-      maxRange = PI;
+      maxRange = 500;
       break;
   }
   return maxRange;

@@ -37,24 +37,37 @@ void setup() {
   
   minRange = minRange(problem);
   maxRange = maxRange(problem);
+  searchRange = (maxRange-minRange);
   
   searchX = random(minRange,maxRange);
   searchY = random(minRange,maxRange);
   
   analyzeProblemForPlotting(problem);
-  plotProblem(problem);
   
 }
 
 void draw(){
   delay(1000);
   if(problem<=3){
-    println(problemName(problem));
     if(moved>minMoved){
+      println(problemName(problem));
+      plotProblem(problem);
+      createAgents(problem);
+      plotAgents();
+      plotSearchPoint();
       moved = 0;
     }else{
       problem++;
       moved = 1e33;
+      
+      minRange = minRange(problem);
+      maxRange = maxRange(problem);
+      searchRange = (maxRange-minRange);
+  
+      searchX = random(minRange,maxRange);
+      searchY = random(minRange,maxRange);
+      
+      analyzeProblemForPlotting(problem);
     }
   }  
 }
