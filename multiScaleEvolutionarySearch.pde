@@ -41,6 +41,8 @@ void setup() {
   searchX = random(minRange,maxRange);
   searchY = random(minRange,maxRange);
   
+  analyzeProblemForPlotting(problem);
+  
 }
 
 void draw(){
