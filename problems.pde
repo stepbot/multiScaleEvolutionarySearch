@@ -35,17 +35,17 @@ float problemValue(int problem, float x, float y){
       
     // Schwefel function
     case 1:
-      functionValue = (418.9829*(2))-((x*sin(sqrt(abs(x))))+(y*sin(sqrt(abs(y)))));
+      functionValue = (418.9829*(2))-((-x*sin(sqrt(abs(-x))))+(-y*sin(sqrt(abs(-y)))));
       break;
       
     // Rastrigin function
     case 2:
-      functionValue = (pow(cos(8*(x-2))*cos(8*(y)),1)-(abs(x-2)+abs(y)));
+      functionValue = -(10*(2)+((pow(x,2)-10*cos(2*PI*x))+(pow(y,2)-10*cos(2*PI*y))));
       break;
       
     // Michalewicz function
     case 3:
-      functionValue = (418.9829*(2))-((x*sin(sqrt(abs(x))))+(y*sin(sqrt(abs(y)))));
+      functionValue = (sin(x)*pow((sin((1*pow(x,2))/PI)),2*(10)))+(sin(y)*pow((sin((2*pow(y,2))/PI)),2*(10)));
       break;
   }
   return functionValue;
@@ -67,12 +67,12 @@ float minRange(int problem){
       
     // Rastrigin function
     case 2:
-      minRange = -5;
+      minRange = -5.14;
       break;
       
     // Michalewicz function
     case 3:
-      minRange = -500;
+      minRange = 0;
       break;
   }
   return minRange;
@@ -94,12 +94,12 @@ float maxRange(int problem){
       
     // Rastrigin function
     case 2:
-      maxRange = 5;
+      maxRange = 5.14;
       break;
       
     // Michalewicz function
     case 3:
-      maxRange = 500;
+      maxRange = PI;
       break;
   }
   return maxRange;
